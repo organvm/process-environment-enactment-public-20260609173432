@@ -11,7 +11,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Compile POSIX harness
         shell: bash
         run: cc -Wall -Wextra -pedantic -std=c99 posix-envp-enactment.c -o posix-envp-enactment
@@ -44,7 +44,7 @@ jobs:
 
           cat posix-edge.txt posix-replicate.txt posix-append.txt posix-omit.txt posix-replace.txt > posix-output.txt
           shasum -a 256 posix-output.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: posix-${{ matrix.os }}-output
           path: |
@@ -54,7 +54,7 @@ jobs:
     name: Windows lpEnvironment on windows-latest
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Compile and run Windows harness
         shell: cmd
         run: |
@@ -64,7 +64,7 @@ jobs:
           windows-lpenvironment-enactment.exe > windows-output.txt
           type windows-output.txt
           powershell -NoProfile -Command "(Get-FileHash windows-output.txt -Algorithm SHA256).Hash.ToLower()"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: windows-output
           path: windows-output.txt
