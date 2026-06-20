@@ -11,7 +11,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Compile POSIX harness
         shell: bash
         run: cc -Wall -Wextra -pedantic -std=c99 posix-envp-enactment.c -o posix-envp-enactment
@@ -54,7 +54,7 @@ jobs:
     name: Windows lpEnvironment on windows-latest
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Compile and run Windows harness
         shell: cmd
         run: |
