@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "description": "Repos promoted into the ranked value tier — discovered to hold concrete, build-out-worthy latent value.",
+  "ranked": [
+    {
+      "repo": "organvm/process-environment-enactment-public-20260609173432",
+      "promoted": "2026-06-22",
+      "source": "auto-discovery",
+      "tier": "infrastructure",
+      "value": "A cross-platform (POSIX and Windows) conformance test suite for validating process environment variable propagation and edge cases.",
+      "first_task": "Wrap these C programs into an automated integration test suite that can be executed against all process runners in the organvm ecosystem.",
+      "thesis": "DISCOVERY.md"
+    }
+  ]
+}

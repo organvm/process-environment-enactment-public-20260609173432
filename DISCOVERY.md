@@ -1,0 +1,3 @@
+This repository contains cross-platform (POSIX and Windows) C programs that enact and validate how environment variables are propagated to child processes. Its highest latent value is as a robust conformance test suite or compliance probe for any runtime, process runner, or VM within the `organvm` estate. By explicitly testing edge cases such as empty names, missing equal signs, duplicated keys, and embedded NUL characters, it ensures that process environments are handled securely and accurately.
+
+First task: Wrap these C programs into an automated, language-agnostic integration test suite that can be run against any newly developed process runner or VM in the `organvm` ecosystem to guarantee environment block conformance.
