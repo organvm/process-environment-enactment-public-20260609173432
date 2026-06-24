@@ -7,8 +7,8 @@
       "promoted": "2026-06-22",
       "source": "auto-discovery",
       "tier": "infrastructure",
-      "value": "A cross-platform (POSIX and Windows) conformance test suite for validating process environment variable propagation and edge cases.",
-      "first_task": "Wrap these C programs into an automated integration test suite that can be executed against all process runners in the organvm ecosystem.",
+      "value": "Cross-platform (POSIX and Windows) process-environment conformance harness for launch semantics (inheritance, replacement, append/omit, malformed/env block edge cases), suitable as a shared acceptance test for all organvm runners/VMs.",
+      "first_task": "Publish this harness as a shared, versioned conformance test package and run it in every runner/VM CI matrix before release.",
       "thesis": "DISCOVERY.md"
     }
   ]
